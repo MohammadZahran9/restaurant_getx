@@ -17,7 +17,8 @@ class Cart extends StatelessWidget {
               Center(
                   child: Text(
                 "Tolal: ${yController.total} SAR",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ))
             ],
           ),
@@ -32,14 +33,14 @@ class Cart extends StatelessWidget {
                     title: Text(yController.Dishes[index].dishName.toString()),
                     subtitle: Row(children: [
                       Text(yController.Dishes[index].dishCurrency.name),
-                      Padding(padding: EdgeInsets.only(left: 3)),
+                      const Padding(padding: EdgeInsets.only(left: 3)),
                       Text(yController.Dishes[index].dishPrice.toString()),
                     ]),
                     trailing: GestureDetector(
                       onTap: () {
                         yController.removeitem(yController.cart[index]);
                       },
-                      child: Icon(Icons.remove),
+                      child: const Icon(Icons.remove),
                     ),
                   ),
                 ),

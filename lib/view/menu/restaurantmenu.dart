@@ -127,7 +127,7 @@ class ResMenu extends StatelessWidget {
                                 .toString()),
                           ),
                           Padding(
-                              padding: EdgeInsets.only(top: 15),
+                              padding: const EdgeInsets.only(top: 15),
                               child: Container(
                                 height: 30,
                                 width: 100,
@@ -139,7 +139,7 @@ class ResMenu extends StatelessWidget {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                        padding: EdgeInsets.only(left: 6),
+                                        padding: const EdgeInsets.only(left: 6),
                                         child: GestureDetector(
                                           onTap: () {
                                             Ccontroller.removeitem(Category[0]
@@ -149,7 +149,7 @@ class ResMenu extends StatelessWidget {
                                               quantity--;
                                             }
                                           },
-                                          child: Icon(
+                                          child: const Icon(
                                             Icons.remove,
                                             color: Colors.white,
                                           ),
@@ -157,12 +157,13 @@ class ResMenu extends StatelessWidget {
                                     GetBuilder<CartController>(
                                       builder: (controller) {
                                         return Text(quantity.toString(),
-                                            style:
-                                                TextStyle(color: Colors.white));
+                                            style: const TextStyle(
+                                                color: Colors.white));
                                       },
                                     ),
                                     Padding(
-                                        padding: EdgeInsets.only(right: 6),
+                                        padding:
+                                            const EdgeInsets.only(right: 6),
                                         child: GestureDetector(
                                           onTap: () {
                                             Ccontroller.additem(Category[0]
@@ -170,7 +171,7 @@ class ResMenu extends StatelessWidget {
                                                 .categoryDishes[y]);
                                             quantity++;
                                           },
-                                          child: Icon(
+                                          child: const Icon(
                                             Icons.add,
                                             color: Colors.white,
                                           ),

@@ -12,16 +12,16 @@ class Home extends StatelessWidget {
     return Scaffold(
         body: GetBuilder<ModelController>(
       init: ModelController(),
-      builder: (Mcontroller) {
+      builder: (controller) {
         return FutureBuilder(
-          future: Mcontroller.getdata(http.Client()),
+          future: controller.getdata(http.Client()),
           builder: (context, snapshot) {
             if (snapshot.hasError) {
               return Text(snapshot.error.toString());
             } else if (snapshot.hasData) {
               return ResMenu(Category: snapshot.data!);
             } else {
-              return Center(
+              return const Center(
                 child: CircularProgressIndicator(),
               );
             }
