@@ -30,10 +30,4 @@ class CartController extends GetxController {
   List<CategoryDish> get cart {
     return Dishes;
   }
-
-  @override
-  void onInit() {
-    super.onInit();
-    update();
-  }
 }
