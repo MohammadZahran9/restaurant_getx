@@ -10,9 +10,10 @@ class ResMenu extends StatelessWidget {
 
   final List<Restaurant> Category;
   final List<Color> colors = [Colors.green, Colors.red];
+  final CartController Ccontroller = Get.put(CartController());
+
   @override
   Widget build(BuildContext context) {
-    CartController Ccontroller = Get.put(CartController());
     return DefaultTabController(
       length: Category[0].tableMenuList.length,
       child: Scaffold(
