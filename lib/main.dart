@@ -4,7 +4,7 @@ import 'package:restaurant_getx/view/Cart/Cart.dart';
 
 import 'view/Home.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      getPages: [GetPage(name: "/Cart", page: () => Cart())],
-      home: Home(),
+      getPages: [GetPage(name: "/Cart", page: () => const Cart())],
+      home: const Home(),
     );
   }
 }
