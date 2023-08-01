@@ -154,8 +154,13 @@ class ResMenu extends StatelessWidget {
                                             color: Colors.white,
                                           ),
                                         )),
-                                    Text(quantity.toString(),
-                                        style: TextStyle(color: Colors.white)),
+                                    GetBuilder<CartController>(
+                                      builder: (controller) {
+                                        return Text(quantity.toString(),
+                                            style:
+                                                TextStyle(color: Colors.white));
+                                      },
+                                    ),
                                     Padding(
                                         padding: EdgeInsets.only(right: 6),
                                         child: GestureDetector(
